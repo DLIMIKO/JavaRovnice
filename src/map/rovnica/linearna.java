@@ -23,19 +23,25 @@ public class linearna extends rovnica
     @Override
     protected void vypisRovnicu()
     {
-        System.out.printf("%.2fx%+.2f=0\n", a,b);
+        System.out.printf("%.2fx %+.2f=0\n", a,b);
     }
 
     @Override
-    protected float[] getKorene()
+    protected Koren[] getKorene()
     {
-        return new float[]{-b/a};
+       Koren K=new Koren(-b/a);
+
+        return new Koren[]{K};
     }
 
     @Override
     protected void vypisKorene()
     {
-     System.out.printf("Koreň rovnice je: %.2f\n", getKorene()[0]);
+
+        System.out.print("Koreň rovnice je:\n K= ");
+        System.out.println(getKorene()[0]);
+
+
     }
 
     @Override

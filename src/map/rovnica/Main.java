@@ -12,10 +12,20 @@ public class Main
         */
 
 
-        linearna Prva=new linearna();
-        Prva.vypisRovnicu();
-        Prva.vypisKorene();
-        System.out.print(Prva);
+
+       kvadraticka Prva=new kvadraticka(1,2,1);
+       kvadraticka Druha=new kvadraticka(1,10, 1);
+       kvadraticka Tretia= new kvadraticka(1,2,3);
+
+       Prva.vypisKorene();
+       Druha.vypisKorene();
+       Tretia.vypisKorene();
+
+       System.out.println();
+       System.out.print("Kto je tu najväčší ? ");
+
+
+
 
 
 

@@ -8,7 +8,7 @@ abstract class rovnica
     protected float a;
     protected float b;
     abstract protected void  vypisRovnicu();
-    abstract protected float[] getKorene();
+    abstract protected Koren[] getKorene();
     abstract protected void vypisKorene();
     abstract public String toString();
 

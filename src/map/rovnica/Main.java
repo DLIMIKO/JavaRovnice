@@ -13,16 +13,11 @@ public class Main
 
 
 
-       kvadraticka Prva=new kvadraticka(1,2,1);
-       kvadraticka Druha=new kvadraticka(1,10, 1);
-       kvadraticka Tretia= new kvadraticka(1,2,3);
+ kvadraticka kva=new kvadraticka(1,1,3);
 
-       Prva.vypisKorene();
-       Druha.vypisKorene();
-       Tretia.vypisKorene();
+ kva.vypisRovnicu();
+ kva.vypisKorene();
 
-       System.out.println();
-       System.out.print("Kto je tu najväčší ? ");
 
 
 

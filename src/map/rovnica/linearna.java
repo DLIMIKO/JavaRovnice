@@ -17,8 +17,29 @@ public class linearna extends rovnica
 
     }
 
-    public linearna(float A){this(A,A);}
-    public linearna(float A, float B) {a=A; b=B;}
+    public linearna(float A)
+    {
+        this(A,A);
+    }
+
+    public linearna(float A, float B)
+    {
+        try
+        {
+            if(A==0)
+            {
+                throw new ArithmeticException("Toto nie je platná rovnica!");
+            }
+        }
+        catch(ArithmeticException AE)
+        {
+            System.out.print(AE.getMessage());
+            System.exit(1);
+        }
+
+        a=A;
+        b=B;
+    }
 
     @Override
     protected void vypisRovnicu()

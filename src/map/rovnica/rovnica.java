@@ -16,32 +16,36 @@ abstract class rovnica
     {
 
        Scanner jin=new Scanner(System.in);
-       float in=jin.nextFloat();
+       float in;
 
-       try
+
+      while(true)
         {
-
-            if(!ajNula && in==0)
+            in=jin.nextFloat();
+            try
             {
-               throw new ArithmeticException(text);
+
+                if (!ajNula && in == 0)
+                {
+                    throw new ArithmeticException(text);
+                }
+                break;
             }
+            catch (ArithmeticException Ex)
+            {
+                System.out.println(Ex.getMessage());
+
+            }
+            catch (InputMismatchException e)
+            {
+                jin.nextLine();
+                System.out.println("Nebolo zadane cislo");
+
+
+            }
+
         }
-       catch(ArithmeticException Ex)
-       {
-
-
-           System.out.println(Ex.getMessage());
-           System.exit(1);
-       }
-       catch(InputMismatchException e)
-       {
-           System.out.println("Nebolo zadane cislo");
-           jin.nextLine();
-       }
-       return in;
-
+        return in;
     }
-
-
 
 }

@@ -14,11 +14,12 @@ public class Main
 
 
  kvadraticka kva=new kvadraticka(1,1,3);
- kubicka kub=new kubicka(-1.345,239.34,602.122,-28920);
+ kubicka kub=new kubicka();
 
 
 
- kub.vypisKorene();
+kub.vypisRovnicu();
+kub.vypisKorene();
 
 
 

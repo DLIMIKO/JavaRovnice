@@ -44,6 +44,7 @@ public class kubicka extends rovnica
 
         //1. normalizujeme a subst. na x=y-r/3 a mat úpravou dostaneme rovn.: y^3+py+q=0
 
+      //ok
         double p = (3*c*a-Math.pow(b,2))/(3*Math.pow(a,2));
         double q = (2*Math.pow(b,3)-9*a*b*c+27*d*Math.pow(a,2))/(27*Math.pow(a,3));
         double D = (Math.pow(p,3))/(27)+(Math.pow(q,2))/(4);
@@ -61,14 +62,25 @@ public class kubicka extends rovnica
      }
      else
          {
-            double r = Math.sqrt(Math.pow(q,2)/4 + Math.abs(D));
-            double fi =Math.atan((-2*Math.sqrt(Math.abs(D))/q));
+            double r = Math.sqrt((Math.pow((-q/2),2)) + -D);
+            double fi = Math.atan(-2*Math.sqrt(-D)/q);
 
-             Koren K1 = new Koren((2*Math.cbrt(r)*Math.cos(fi/3))-b/(3*a));
-             Koren K2 = new Koren((2*Math.cbrt(r)*Math.cos((fi+2*Math.PI)/3))-b/(3*a));
-             Koren K3 = new Koren((2*Math.cbrt(r)*Math.cos((fi+4*Math.PI)/3))-b/(3*a));
+//dali sme plus
+           if(fi>=0)
+           {
+               Koren K1 = new Koren((2*Math.cbrt(r)*Math.cos(fi/3))-b/(3*a));
+               Koren K2 = new Koren((2*Math.cbrt(r)*Math.cos((fi+2*Math.PI)/3))-b/(3*a));
+               Koren K3 = new Koren((2*Math.cbrt(r)*Math.cos((fi+4*Math.PI)/3))-b/(3*a));
+               return new Koren[]{K1,K2,K3};
+           }
 
-             return new Koren[]{K1,K2,K3};
+
+           else {
+               Koren K1 = new Koren((-2 * Math.cbrt(r) * Math.cos(fi / 3)) - b / (3 * a));
+               Koren K2 = new Koren((-2 * Math.cbrt(r) * Math.cos((fi + 2 * Math.PI) / 3)) - b / (3 * a));
+               Koren K3 = new Koren((-2 * Math.cbrt(r) * Math.cos((fi + 4 * Math.PI) / 3)) - b / (3 * a));
+               return new Koren[]{K1, K2, K3};
+           }
          }
 
 

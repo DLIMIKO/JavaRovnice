@@ -5,17 +5,17 @@ import jdk.nashorn.internal.runtime.arrays.ArrayIndex;
 public class Koren
 {
 
-    private float realCast;
-    private float komplCast;
+    private double realCast;
+    private double komplCast;
 
 
-    Koren(float rC, float kC)
+    Koren(double rC, double kC)
     {
         realCast=rC;
         komplCast=kC;
 
     }
-    Koren(float rC)
+    Koren(double rC)
     {
         realCast=rC;
         komplCast=0;
@@ -24,12 +24,12 @@ public class Koren
 
 
    //geters
-    public float getRealCast()
+    public double getRealCast()
     {
         return realCast;
     }
 
-    public float getKomplCast()
+    public double getKomplCast()
     {
         return komplCast;
     }

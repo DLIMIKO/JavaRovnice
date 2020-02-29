@@ -5,24 +5,24 @@ import java.util.Scanner;
 
 public class linearna extends rovnica
 {
-    private float koren;
+
     private static  Scanner sc=new Scanner(System.in);
     public linearna()
     {
 
         System.out.println("Zadaj koeficienty a a b");
-        a=getFloat(false, "Nula nie!");
-        b=getFloat(true, "Nula nie");
+        this.a = getDouble(false, "Nula nie!");
+        b= getDouble(true, "Nula nie");
 
 
     }
 
-    public linearna(float A)
+    public linearna(double A)
     {
         this(A,A);
     }
 
-    public linearna(float A, float B)
+    public linearna(double A, double B)
     {
         try
         {

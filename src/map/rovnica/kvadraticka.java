@@ -4,15 +4,15 @@ public class kvadraticka extends rovnica
 
 {
 
-    private float c;
+    private double c;
 
     kvadraticka()
     {
-        a=getFloat(false,"Nula nie");
-        b=getFloat(true,"Nula nie");
-        c=getFloat(true,"Nula nie");
+        a= getDouble(false,"Nula nie");
+        b= getDouble(true,"Nula nie");
+        c= getDouble(true,"Nula nie");
     }
-    kvadraticka(float A, float B, float C)
+    kvadraticka(double A, double B, double C)
     {
 
         try
@@ -32,7 +32,7 @@ public class kvadraticka extends rovnica
         c=C;
     }
 
-    kvadraticka(float A){this(A,A,A);}
+    kvadraticka(double A){this(A,A,A);}
 
 
 
@@ -45,7 +45,7 @@ public class kvadraticka extends rovnica
     @Override
     protected Koren[] getKorene()
     {
-       float D=(float)Math.pow(b,2)-4*a*c;
+       double D=Math.pow(b,2)-4*a*c;
 
        if (a==0)
        {
@@ -54,8 +54,8 @@ public class kvadraticka extends rovnica
        }
        else if(D>0)
        {
-           Koren K1=new Koren((-b+(float)Math.sqrt(D))/(2*a));
-           Koren K2=new Koren((-b-(float)Math.sqrt(D))/(2*a));
+           Koren K1=new Koren((-b+Math.sqrt(D))/(2*a));
+           Koren K2=new Koren((-b-Math.sqrt(D))/(2*a));
            return new Koren[]{K1, K2};
        }
        else if(D==0)
@@ -67,8 +67,8 @@ public class kvadraticka extends rovnica
         }
        else
            {
-               Koren K1=new Koren( ((-b)/(2*a)),((+(float)Math.sqrt(Math.abs(D)))/(2*a)));
-               Koren K2=new Koren( ((-b)/(2*a)),((-(float)Math.sqrt(Math.abs(D)))/(2*a)));
+               Koren K1=new Koren( ((-b)/(2*a)),((+Math.sqrt(Math.abs(D)))/(2*a)));
+               Koren K2=new Koren( ((-b)/(2*a)),((-Math.sqrt(Math.abs(D)))/(2*a)));
                return new Koren[]{K1,K2};
            }
     }
@@ -76,7 +76,7 @@ public class kvadraticka extends rovnica
     @Override
     protected void vypisKorene()
     {
-        float D=(float)Math.pow(b,2)-4*a*c;
+        double D=Math.pow(b,2)-4*a*c;
 
 
         if(a==0)

@@ -5,23 +5,23 @@ import java.util.Scanner;
 abstract class rovnica
 
 {
-    protected float a;
-    protected float b;
+    protected double a;
+    protected double b;
     abstract protected void  vypisRovnicu();
     abstract protected Koren[] getKorene();
     abstract protected void vypisKorene();
     abstract public String toString();
 
-    float getFloat(boolean ajNula, String text)
+    double getDouble(boolean ajNula, String text)
     {
 
        Scanner jin=new Scanner(System.in);
-       float in;
+       double in;
 
 
       while(true)
         {
-            in=jin.nextFloat();
+            in=jin.nextDouble();
             try
             {
 

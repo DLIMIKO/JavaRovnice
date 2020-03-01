@@ -13,15 +13,19 @@ public class Main
 
 
 
+    Koren K1=new Koren(1,2);
+    Koren K2=new Koren(1,-2);
+
+
        linearna lin=new linearna(true,6);
-       kvadraticka kva=new kvadraticka(false, 1,2);
-       kubicka kub=new kubicka(true,-7.765,-9.075,-111);
+       kvadraticka kva=new kvadraticka(K1,K2);
+       kubicka kub=new kubicka( 4,K1,K2);
 
 
 
 
-kub.vypisRovnicu();
-kub.vypisKorene();
+kva.vypisRovnicu();
+kva.vypisKorene();
 
 
 

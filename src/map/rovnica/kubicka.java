@@ -29,12 +29,28 @@ public class kubicka extends rovnica
 
     kubicka(boolean koren, double K1, double K2, double K3)
     {
+
+
         a=1;
         b=-(K1+K2+K3);
         c=K1*(K2+K3)+K2*K3;
         d=-(K1*K2*K3);
 
     }
+    kubicka ( double K1, Koren K2, Koren K3)
+    {
+
+        Operatory OP1=new Operatory(K2, K3);
+
+
+
+        a=1;
+        b=-(K1+OP1.Sum().getRealCast());
+        c=K1*(OP1.Sum().getRealCast())+OP1.Mul().getRealCast();
+        d=-(K1*OP1.Mul().getRealCast());
+
+    }
+
 
 
 

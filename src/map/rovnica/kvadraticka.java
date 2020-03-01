@@ -40,6 +40,13 @@ public class kvadraticka extends rovnica
         b=-(K1+K2);
         c=K1*K2;
     }
+    kvadraticka (Koren K1, Koren K2)
+    {
+        Operatory OP1=new Operatory(K1,K2);
+        a=1;
+        b=-(OP1.Sum().getRealCast());
+        c=OP1.Mul().getRealCast();
+    }
 
 
 

@@ -12,6 +12,7 @@ abstract class rovnica
     abstract protected void vypisKorene();
     abstract public String toString();
 
+
     double getDouble(boolean ajNula, String text)
     {
 

@@ -27,6 +27,15 @@ public class kubicka extends rovnica
 
     }
 
+    kubicka(boolean koren, double K1, double K2, double K3)
+    {
+        a=1;
+        b=-(K1+K2+K3);
+        c=K1*(K2+K3)+K2*K3;
+        d=-(K1*K2*K3);
+
+    }
+
 
 
     @Override
@@ -114,4 +123,6 @@ public class kubicka extends rovnica
     {
         return String.format("%.2fx^3 %+.2fx^2 %+.2fx %+.2f=0\n",a,b,c,d);
     }
+
+
 }

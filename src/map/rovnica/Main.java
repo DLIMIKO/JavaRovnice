@@ -13,8 +13,10 @@ public class Main
 
 
 
- kvadraticka kva=new kvadraticka(1,1,3);
- kubicka kub=new kubicka();
+       linearna lin=new linearna(true,6);
+       kvadraticka kva=new kvadraticka(false, 1,2);
+       kubicka kub=new kubicka(true,-7.765,-9.075,-111);
+
 
 
 

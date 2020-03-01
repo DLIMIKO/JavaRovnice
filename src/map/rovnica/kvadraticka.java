@@ -34,6 +34,13 @@ public class kvadraticka extends rovnica
 
     kvadraticka(double A){this(A,A,A);}
 
+    kvadraticka(boolean koren, double K1, double K2)
+    {
+        a=1;
+        b=-(K1+K2);
+        c=K1*K2;
+    }
+
 
 
     @Override
@@ -116,4 +123,6 @@ public class kvadraticka extends rovnica
     {
         return String.format("%.2fx^2 %+.2fx %+.2f",a,b,c);
     }
+
+
 }

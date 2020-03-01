@@ -38,20 +38,15 @@ public class Koren
     public String toString()
     {
 
-
         if (komplCast==0)
         {
-            return String.valueOf(realCast);
-
+            return String.format("%.2f",realCast);
         }
 
         else
             {
                 return String.format("%.2f %+.2f i", realCast, komplCast);
             }
-
     }
-
-
 
 }

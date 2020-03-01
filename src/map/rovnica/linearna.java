@@ -40,6 +40,11 @@ public class linearna extends rovnica
         a=A;
         b=B;
     }
+    linearna(boolean koren, double K)
+    {
+        a=1;
+        b=-K;
+    }
 
     @Override
     protected void vypisRovnicu()
@@ -70,6 +75,7 @@ public class linearna extends rovnica
     {
         return String.format("%.2fx%+.2f=0\n", a,b);
     }
+
 
 
 }

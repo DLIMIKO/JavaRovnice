@@ -12,7 +12,7 @@ public class kvadraticka extends rovnica
         b= getDouble(true,"Nula nie");
         c= getDouble(true,"Nula nie");
     }
-    kvadraticka(double A, double B, double C)
+    public kvadraticka(double A, double B, double C)
     {
 
         try

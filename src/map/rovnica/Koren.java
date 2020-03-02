@@ -1,6 +1,6 @@
 package map.rovnica;
 
-import jdk.nashorn.internal.runtime.arrays.ArrayIndex;
+
 
 public class Koren
 {
@@ -49,6 +49,15 @@ public class Koren
             }
     }
 
-}
+
+   /* public boolean equals(Object o)
+    {
+        if(o==this)
+        {
+
+        }
+        */
+    }
+
 
 

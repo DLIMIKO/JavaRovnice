@@ -53,7 +53,7 @@ public class linearna extends rovnica
     }
 
     @Override
-    protected Koren[] getKorene()
+    public Koren[] getKorene()
     {
        Koren K=new Koren(-b/a);
 

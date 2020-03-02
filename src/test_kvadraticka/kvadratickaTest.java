@@ -1,31 +1,31 @@
-package testKva;
+package test_kvadraticka;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 import map.rovnica.kvadraticka;
+import map.rovnica.Koren;
 class kvadratickaTest {
 
 
-    kvadraticka k1;
-    kvadraticka k2;
-    kvadraticka k3;
+    private kvadraticka Prva;
+
 
 
     @BeforeEach
     void setUp()
     {
-        k1=new kvadraticka(1,-5,6);
-        k2=new kvadraticka(1,4,6);
-        k3=new kvadraticka(1,4,4);
-
-
+        Prva=new kvadraticka(1,-2,5);
     }
 
     @Test
     void getKorene()
     {
+
+       Koren []Pole={new Koren(1,+2), new Koren(1,-2)};
+       assertArrayEquals(Prva.getKorene(),Pole);
+
 
 
     }

@@ -57,7 +57,7 @@ public class kvadraticka extends rovnica
     }
 
     @Override
-    protected Koren[] getKorene()
+    public Koren[] getKorene()
     {
        double D=Math.pow(b,2)-4*a*c;
 

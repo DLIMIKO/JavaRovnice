@@ -4,42 +4,19 @@ public class Main
 {
     public static void main(String[] args)
     {
-       /* int S = 47;
-        int M = 987;
-        S=change(M, S=M);
-        System.out.print(S);
-        System.out.print(M);
-        */
+        linearna lin=new linearna(1,2);
+        kvadraticka kva=new kvadraticka(1,5,7);
+        kubicka kub=new kubicka(2,-4,-22,24);
+
+        Koren K1=new Koren(1,+2);
+        Koren K2=new Koren(1,-2);
+        kvadraticka kva2=new kvadraticka(K1,K2);
+
+        kub.vypisKorene();
 
 
-
-    Koren K1=new Koren(1,2);
-    Koren K2=new Koren(1,-2);
-
-
-       linearna lin=new linearna(true,6);
-       kvadraticka kva=new kvadraticka(K1,K2);
-       kubicka kub=new kubicka( 4,K1,K2);
-
-
-
-
-kva.vypisRovnicu();
-kva.vypisKorene();
-
-
-
-
-
-
-
-
+       //návod na riešenie kub. rovníc https://www.mathemania.com/lesson/cardanos-formula-solving-cubic-equations/
+        //online riešiteľ kub. rovníc http://www.1728.org/cubic.htm
     }
-        static int change(int c, int d)
-        {
-            return c;
-        }
-
-
 }
 

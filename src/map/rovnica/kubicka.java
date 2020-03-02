@@ -5,7 +5,7 @@ public class kubicka extends rovnica
     private double c;
     private double d;
 
-    kubicka(double A, double B, double C, double D)
+    public kubicka(double A, double B, double C, double D)
     {
         a=A;
         b=B;
@@ -27,6 +27,8 @@ public class kubicka extends rovnica
 
     }
 
+   //inicializácia pomocou koreňov v R
+
     kubicka(boolean koren, double K1, double K2, double K3)
     {
 
@@ -37,7 +39,10 @@ public class kubicka extends rovnica
         d=-(K1*K2*K3);
 
     }
-    kubicka ( double K1, Koren K2, Koren K3)
+
+    //inicializácia pomocou koreňov v C
+
+    kubicka (double K1, Koren K2, Koren K3)
     {
 
         Operatory OP1=new Operatory(K2, K3);
@@ -61,21 +66,23 @@ public class kubicka extends rovnica
     }
 
     @Override
-    protected Koren[] getKorene()
+    public Koren[] getKorene()
     {
 
 
 
 
-        //1. normalizujeme a subst. na x=y-r/3 a mat úpravou dostaneme rovn.: y^3+py+q=0
+        //1. normalizujeme a subst. na x=y-b/3a a mat úpravou dostaneme rovn.: y^3+py+q=0 a určíme diskriminant
 
-      //ok
+
         double p = (3*c*a-Math.pow(b,2))/(3*Math.pow(a,2));
         double q = (2*Math.pow(b,3)-9*a*b*c+27*d*Math.pow(a,2))/(27*Math.pow(a,3));
         double D = (Math.pow(p,3))/(27)+(Math.pow(q,2))/(4);
 
      if(D>=0)
      {
+        //2. nájeme čísla v a w, pre kt. platí v+w-b/3a=x
+
          double v = Math.cbrt(-q/2+Math.sqrt(D));
          double w = Math.cbrt(-q/2-Math.sqrt(D));
 
@@ -85,12 +92,13 @@ public class kubicka extends rovnica
 
          return new Koren[]{K1,K2,K3};
      }
+    //3. riešime situáciu D<0, tj. odmocnina z komplex. čísla
      else
          {
             double r = Math.sqrt((Math.pow((-q/2),2)) + -D);
             double fi = Math.atan(-2*Math.sqrt(-D)/q);
 
-//dali sme plus
+
            if(fi>=0)
            {
                Koren K1 = new Koren((2*Math.cbrt(r)*Math.cos(fi/3))-b/(3*a));
@@ -100,6 +108,7 @@ public class kubicka extends rovnica
            }
 
 
+         //4. ak je fi<0, výsledky menia znamienko na opačné
            else {
                Koren K1 = new Koren((-2 * Math.cbrt(r) * Math.cos(fi / 3)) - b / (3 * a));
                Koren K2 = new Koren((-2 * Math.cbrt(r) * Math.cos((fi + 2 * Math.PI) / 3)) - b / (3 * a));
@@ -107,19 +116,9 @@ public class kubicka extends rovnica
                return new Koren[]{K1, K2, K3};
            }
          }
-
-
-
-
-
-
-
-        //vypočítame x1, x2, x3:
-
-
-
-
     }
+
+
 
     @Override
     protected void vypisKorene()

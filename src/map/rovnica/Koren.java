@@ -1,8 +1,6 @@
 package map.rovnica;
 
 
-import java.util.Objects;
-
 public class Koren
 {
 
@@ -10,12 +8,24 @@ public class Koren
     private double komplCast;
 
 
+    /**
+     * Konštruktor inicializuje reálnu a imaginárnu časť komplexného čísla.
+     * @param rC <reálna časť>
+     * @param kC <imaginárna časť>
+     */
+
     public Koren(double rC, double kC)
     {
         realCast=rC;
         komplCast=kC;
-
     }
+
+    /**
+     * Konštruktor inicializuje iba reálnu časť komplexného čísla.
+     * Imaginárna časť sa implicitne nastaví na 0.
+     * @param rC <reálna časť>
+     */
+
     public Koren(double rC)
     {
         realCast=rC;
@@ -23,8 +33,12 @@ public class Koren
 
     }
 
+    /**
+     * Funkcia vráti reálnu časť komplexného čísla
+     * @return <vráti >
+     */
 
-   //geters
+
     public double getRealCast()
     {
         return realCast;
@@ -57,15 +71,13 @@ public class Koren
 
         if (o == this) return true;
 
-        if (!(o instanceof Koren)) {
+        if (!(o instanceof Koren))
+        {
             return false;
         }
 
         return this.realCast==((Koren) o).realCast && this.komplCast==((Koren) o).komplCast;
     }
-
-
-
 
 }
 

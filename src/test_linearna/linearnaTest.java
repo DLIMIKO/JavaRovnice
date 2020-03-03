@@ -1,7 +1,7 @@
 package test_linearna;
 import map.rovnica.Koren;
 import map.rovnica.linearna;
-import sun.jvm.hotspot.utilities.Assert;
+//import sun.jvm.hotspot.utilities.Assert;
 
 
 import static org.junit.jupiter.api.Assertions.*;

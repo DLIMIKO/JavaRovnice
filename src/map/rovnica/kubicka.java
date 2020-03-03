@@ -69,9 +69,6 @@ public class kubicka extends rovnica
     public Koren[] getKorene()
     {
 
-
-
-
         //1. normalizujeme a subst. na x=y-b/3a a mat úpravou dostaneme rovn.: y^3+py+q=0 a určíme diskriminant
 
 
